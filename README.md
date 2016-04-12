@@ -8,7 +8,9 @@ It is a simple expert system implementation of an ES playng scissors paper rock 
 python main.py [--debug]
 ```
 
-Then follow messgaes on screen. The ES will try to predict you move using your two latests moves. The more you play more the ES will learn about you.
+Then follow messgaes on screen.
+First two round the computer will choose randomly. From round 3, the ES will try to predict your choice using your two latest choices.
+The more you play more the ES will learn about you.
 
 If you use the `--debug` option you will see the rules table:
 
@@ -71,7 +73,6 @@ If you use the `--debug` option you will see the rules table:
 │ SCISSORS      │ SCISSORS                │ SCISSORS     │        0 │ False   │
 ╘═══════════════╧═════════════════════════╧══════════════╧══════════╧═════════╛
 ```
-
-As this is a simple and known domain we are able to define and see the entire rules table.
+It is used to predict the next user choice. As this is a simple and known domain we are able to define and see the entire rules table.
 
 This was inpired by the book **Inteligencia Artificial** `ISBN 978-987-1347-51-3`
