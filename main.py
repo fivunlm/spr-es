@@ -20,7 +20,7 @@ def main(debug=False):
     while True:
         print("\nRound: %d" % round)
 
-        # First make computer's choice so there is no way to know users input before it makes its desicion
+        # First make computer's choice so there is no way to know users input before it makes its decision
         if round <= 2:
             computer_choice = randint(1, 3)
         else:

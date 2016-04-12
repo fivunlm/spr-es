@@ -28,22 +28,26 @@ class RuleManager:
                     rule.set(last, second_to_last, int(consequent))
                     self.rules.append(rule)
 
-    def check_rules(self, p_one, p_two, debug=False):
+    def check_rules(self, last, second_to_last, debug=False):
         self.debug_info = []
 
         for rule in self.rules:
-            rule.validate(p_one, p_two)
+            rule.validate(last, second_to_last)
 
             if debug:
                 self.debug_info.append([option_to_str(rule.last_choice), option_to_str(rule.second_to_last_choice),
                     option_to_str(rule.consequent), rule.weight, str(rule.valid)])
 
     def select_rule_and_get_consequent(self):
-        weight = - sys.maxint
+        """
+        Will go trough all valid rules and will select the heaviest one
+        :return:
+        """
+        aux_weight = - sys.maxint
         consequent = 0
         for index, rule in enumerate(self.rules):
-            if rule.valid and rule.weight > weight:
-                weight = rule.weight
+            if rule.valid and rule.weight > aux_weight:
+                aux_weight = rule.weight
                 consequent = rule.consequent
                 self.selected_rule_index = index
 
