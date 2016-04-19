@@ -12,7 +12,7 @@ Then follow messgaes on screen.
 First two round the computer will choose randomly. From round 3, the ES will try to predict your choice using your two latest choices.
 The more you play more the ES will learn about you.
 
-If you use the `--debug` option you will see the rules table:
+If you use the `--debug` option you will see the rules decicion table:
 
 ``` python
 ╒═══════════════╤═════════════════════════╤══════════════╤══════════╤═════════╕
